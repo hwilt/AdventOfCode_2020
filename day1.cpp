@@ -10,27 +10,24 @@ using namespace std;
 string input;
 
 /*
- * Gets the input out of the file and into a string
+ * Part One for the day
 */
-string getInput() {
-    string out;
+int partOne() {
+    int ret;
+    int* x = new int[6];
+    int i = 0;
     ifstream file("input/day1.txt");
     if (file.is_open()) {
         string line;
         while(getline(file, line)){
-            out += line;
+            x[i] = stoi(line);
+            i++;
         }
     }
-    return out;
-}
-
-/*
- * Part One for the day
-*/
-int partOne(string in) {
-    int ret;
-    //TODO: Fill this in
-    
+    file.close();
+    for(int k = 0; k < 6; k++){
+        if()
+    }
     
     
     return ret;
@@ -48,8 +45,7 @@ int partTwo(string in) {
 }
 
 int main() {
-    input = getInput();
-    cout << partOne(input) << endl;
-    cout << partTwo(input);
+    cout << partOne() << endl;
+    cout << partTwo();
     return 0;
 }
