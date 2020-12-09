@@ -7,21 +7,20 @@
 using namespace std;
 
 //input for the day
-string input;
-
+string input[10];
+int size = 0;
 /*
  * Gets the input out of the file and into a string
 */
-string getInput() {
-    string out;
+void getInput() {
     ifstream file("input/day10.txt");
     if (file.is_open()) {
         string line;
         while(getline(file, line)){
-            out += line;
+            input[size] = line;
+            size++;
         }
     }
-    return out;
 }
 
 /*
@@ -48,8 +47,8 @@ int partTwo(string in) {
 }
 
 int main() {
-    input = getInput();
-    cout << partOne(input) << endl;
-    cout << partTwo(input);
+    getInput();
+    cout << "Part 1: " << partOne() << endl;
+    cout << "Part 2: " << partTwo();
     return 0;
 }
