@@ -26,7 +26,7 @@ void getInput() {
 /*
  * Part One for the day
 */
-int partOne(string in) {
+int partOne() {
     int ret;
     //TODO: Fill this in
     
@@ -38,7 +38,7 @@ int partOne(string in) {
 /*
  * Part Twp for the day
 */
-int partTwo(string in) {
+int partTwo() {
     int ret;
     //TODO: Fill this in
 
